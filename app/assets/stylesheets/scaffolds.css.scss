@@ -9,15 +9,23 @@
 html {
   height: 100%;
   font-size: 100%;
+  background: $navi url(black-dag.png) repeat;
 }
 body {
   color: #333;
   font-size: 1em;
   padding: 0;
   margin:0;
+  height: 100%;
   font-family: 'Open Sans', sans-serif;
   //font-family: 'Open Sans Condensed', sans-serif;
+
 }
+#page-container
+  {
+    height: 100%;
+    overflow: hidden;
+  }
 
 p, ol, ul, td {
 

@@ -1,0 +1,44 @@
+.meny
+	{
+  		
+  		font-family: $font-condensed;
+  		font-weight: 700;
+  		font-size: 1.5rem;
+  		background: $navi url(black-dag.png) repeat;
+  		height: 100%;
+  	ul
+  		{
+  			list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+
+  		}
+  	li
+  		{
+  			padding: .75rem;
+
+  		}
+  	a
+  		{
+  			text-decoration: none;
+  			display: block;
+  			color: #fff;
+  		}
+
+	}//end of meny
+
+.w-t-meny
+	{
+		height: 4.5rem;
+		background: $main url(blue-dag.png) repeat;
+
+	h2
+		{
+			margin: 0 0 0 0.75rem;
+			line-height: 4.5rem;
+			height: 4.5rem;
+			font-size: 38px;
+			color: #fff;
+		}
+
+	}//end of wrapper title meny
