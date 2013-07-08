@@ -1,0 +1,127 @@
+.w-site-bar
+	{
+	    position: relative;
+	    margin:0;
+	    padding:0;
+	    background: $main url(blue-dag.png) repeat;
+
+	    height: 4.5rem;
+	    font-family: $font-condensed;
+	}
+
+.site-bar
+	{
+	    height:4.5rem;
+	    margin: 0;
+	    padding: 0;
+
+    ul
+		{		   
+
+		    margin:0 4.5rem;
+		    padding:0;		  
+		}
+
+    ul > li, li > h1
+	    {
+	 		list-style-type: none;
+		    margin:0;
+		    padding:0;
+ 			display: inline-block;
+ 			height: 4.5rem;
+	    }
+
+	li
+		{
+
+		&:nth-child(2)
+			{
+				float: right;
+			}
+
+		}
+
+	}//end of sitebar
+
+
+
+.alignment 
+	{
+		position: relative;
+	    height: 4.5rem;
+	    font-size: 2.375rem;
+	    color: #fff;
+	    line-height: 4.5rem;
+	    display: inline-block;
+	    text-decoration: none;
+	    
+	   
+	&:hover
+    	{
+    		color: darken(#fff, 3%);
+	    }
+	
+
+	}
+.navigation
+	{
+		padding-left: 2rem;
+
+	&:before
+		{
+			position: absolute;
+			content: " ";
+			left: 0px;
+			top: 5px;
+			bottom: 5px;
+			color: #fff;
+			background: #fff;
+			width: 1px;
+
+		}
+
+	}
+
+.contact
+	{
+		padding-right: 2rem;
+	&:after
+		{
+			position: absolute;
+			content: " ";
+			right: 0px;
+			top: 5px;
+			bottom: 5px;
+			color: #fff;
+			background: #fff;
+			width: 1px;
+
+		}
+	}
+
+.i-contact
+	{
+		position: absolute;
+		height: 4.5rem;
+		width: 4.5rem;
+		padding: 5px;
+		cursor: pointer;
+
+	&:hover
+		{
+			background: darken($main, 5%);
+		}
+
+	
+	&:active
+		{
+			background: darken($main, 8%);
+
+			svg
+			{
+				margin-top: 2px;
+			}
+
+		}
+		
+	}
