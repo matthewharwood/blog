@@ -1,6 +1,13 @@
 Blog::Application.routes.draw do
-  resources :articles
+  resources :works
 
+
+  get "welcome/index"
+  match 'about' => 'welcome#about', as: 'about'
+  match 'contact' => 'welcome#contact', as: 'contact'
+
+
+  root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
