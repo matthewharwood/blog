@@ -16,8 +16,11 @@
   	li
   		{
         position: relative;
-  			padding: .75rem .75rem .75rem 4rem;
+  			line-height: 4.5rem;
+        padding-left: 4.75rem;
         height: 4.5rem;
+        border-bottom: 1px #000 solid;
+        
         &.alive
         {
           background: rgba(255,255,255, .3);
@@ -27,7 +30,7 @@
           {
             position:absolute;
             left:0rem;
-            top: -.25rem;
+            height: 4.5rem;
           }
 
   		}
