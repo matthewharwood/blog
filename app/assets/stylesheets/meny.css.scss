@@ -15,7 +15,20 @@
   		}
   	li
   		{
-  			padding: .75rem;
+        position: relative;
+  			padding: .75rem .75rem .75rem 4rem;
+        height: 4.5rem;
+        &.alive
+        {
+          background: rgba(255,255,255, .3);
+        }
+
+        .icon
+          {
+            position:absolute;
+            left:0rem;
+            top: -.25rem;
+          }
 
   		}
   	a
