@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
   # GET /works
   # GET /works.json
+  
   def index
     @works = Work.all
 
@@ -26,6 +27,9 @@ class WorksController < ApplicationController
   def new
     @work = Work.new
 
+    @all_categories = Category.all
+    @work_category = @work.categoryworks.build
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @work }
@@ -35,6 +39,9 @@ class WorksController < ApplicationController
   # GET /works/1/edit
   def edit
     @work = Work.find(params[:id])
+
+    @all_categories = Category.all
+    @work_category = @work.categoryworks.build
   end
 
   # POST /works

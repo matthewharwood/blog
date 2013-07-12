@@ -1,4 +1,9 @@
 Blog::Application.routes.draw do
+  root :to => 'welcome#index'
+
+  resources :categories
+
+
   resources :works
 
 
@@ -7,7 +12,7 @@ Blog::Application.routes.draw do
   match 'contact' => 'welcome#contact', as: 'contact'
 
 
-  root :to => 'welcome#index'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
