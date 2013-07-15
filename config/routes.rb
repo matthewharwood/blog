@@ -5,13 +5,12 @@ Blog::Application.routes.draw do
 
 
   resources :works
-
+  
 
   get "welcome/index"
   match 'about' => 'welcome#about', as: 'about'
   match 'contact' => 'welcome#contact', as: 'contact'
-
-
+  match 'admin' => 'welcome#admin', as: 'admin'
   
 
   # The priority is based upon order of creation:

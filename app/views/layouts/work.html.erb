@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
 <div id="page-container">
 	<%= render '/side-bar' %>
 	<%= yield %>
@@ -62,12 +61,8 @@
 		</script>
 
 		<script>
-			
-			$(".switchtext").click(function() {
-			    var $selected = $(".selected").removeClass("selected");
-			    var divs = $selected.parent().children();
-			    divs.eq((divs.index($selected) + 1) % divs.length).addClass("selected");
-			});
+
+		//	var baz = $('div').data('foo');
 
 		</script>
 </body>

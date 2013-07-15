@@ -1,0 +1,43 @@
+    
+
+    <div class="contents-2">
+      <%#= render '/site-bar' %>
+      
+      <div class="w-main">
+        <%#= render '/quasi-side-bar' %>
+        <div class="welcome-main">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Subtitle</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+
+        <% @works.each do |work| %>
+          <tr>
+            <td><%= work.name %></td>
+            <td><%= work.subtitle %></td>
+            <td><%= work.categories.pluck(:name) %></td>
+
+            <td><%= link_to 'Show', work %></td>
+            <td><%= link_to 'Edit', edit_work_path(work) %></td>
+            <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+          
+        </table>
+
+        <br />
+
+        <%= link_to 'New Work', new_work_path %>
+      
+        </div><!--end of main-->
+
+      </div><!-- end of w-main-->
+
+    </div><!--end of contents-->
+
+
+

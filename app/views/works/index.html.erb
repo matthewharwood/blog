@@ -1,28 +1,56 @@
-<h1>Listing works</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Subtitle</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @works.each do |work| %>
-  <tr>
-    <td><%= work.name %></td>
-    <td><%= work.subtitle %></td>
-    <td><%= work.categories.pluck(:name) %></td>
+      <div class="contents">
+      <%= render '/site-bar' %>
 
-    <td><%= link_to 'Show', work %></td>
-    <td><%= link_to 'Edit', edit_work_path(work) %></td>
-    <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-  
-</table>
+      <div class="w-main-works group">
+        <%= render '/quasi-side-bar' %>
+       
+        <div class="w-select-nav">
+          <% count = 0 %>
+          <% @works.each do |work| %>
 
-<br />
+            <article class="work-item" data-project="<%= work.id %>" data-category="<%#= work.categories.pluck(:name) %>">
+              <header class="w-article-title ">
+                 <%=raw work.svg %>
+                  <span class="article-number">
+                    <% if count < 10 %>
+                    0<%= count %>
+                    <% else %>
+                    <%= count %>
+                    <% end %>
+                    </span><h1 class="article-name"><%= work.name %>
 
-<%= link_to 'New Work', new_work_path %>
+                  </h1>
+                </header>
+              </a>
+            </article>
+            <% count += 01 %>
+          <% end %>
+
+        </div>
+
+        <div class="w-feat-prev">
+          <div class="w-feat-img">
+            <img class="feat-img" src="http://placehold.it/1280x700" >
+          </div>
+          <div class="w-feat-panel">
+            <div class="feat-panel">
+              <div class="w-feat-content">
+                <h1 class="feat-title">Skatelocal.ly</h1>
+
+                <p class="feat-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div><!--end of contents-->
+

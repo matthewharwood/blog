@@ -1,5 +1,18 @@
-<h1>New work</h1>
 
-<%= render 'form' %>
+    <div class="contents-2">
+      <%= render '/site-bar' %>
+      
+      <div class="w-main">
+        <%= render '/quasi-side-bar' %>
+		<div class="welcome-main">
+			<h1>New work</h1>
 
-<%= link_to 'Back', works_path %>
+			<%= render 'form' %>
+
+			<%= link_to 'Back', works_path %>
+
+        </div><!--end of main-->
+
+      </div><!-- end of w-main-->
+
+    </div><!--end of contents-->

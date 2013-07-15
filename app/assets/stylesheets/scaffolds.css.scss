@@ -25,7 +25,6 @@ body {
   {
     height: 100%;
     overflow: hidden;
-    background-color: #fff;
   }
 
 p, ol, ul, td {
@@ -77,4 +76,18 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+@mixin scale($value) {
+  -webkit-transform: scale($value);
+  -moz-transform: scale($value);
+  -ms-transform: scale($value);
+  -o-transform: scale($value);
 }

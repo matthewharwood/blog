@@ -7,7 +7,7 @@ class Work < ActiveRecord::Base
   has_many	:categoryworks
   has_many :categories, :through => :categoryworks
   accepts_nested_attributes_for :categories
-  attr_accessible :name, :subtitle, :category_ids 
+  attr_accessible :name, :subtitle, :category_ids, :svg
 
    def categoryworks=(works)
    	binding.pry

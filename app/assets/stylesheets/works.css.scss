@@ -1,3 +1,274 @@
 // Place all the styles related to the works controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//scaffolding
+.w-main-works
+	{
+		position: relative;
+		height:100%;
+		padding: 0 0 0 4.5rem;
+		width: 100%;
+	}
+.w-select-nav
+	{
+		height: 100%;
+		width: 100%;
+		background: #fff;
+		float: left;
+		position: relative;
+	}
+
+.w-feat-prev
+	{
+		height: 100%;
+		width: 66.66666%;
+		background: #555;
+		border-left: 1px #ccc solid;
+		right: 0;
+		position: absolute;
+	}
+
+//select-navgation scss
+
+.work-item
+	{
+		height: 8.5rem;
+		width: 100%;
+		position: relative;
+		background: #fff;
+
+	}
+
+.work-item
+	{
+		position: relative;
+		height: 9rem;
+		overflow: auto;
+	}
+
+.project-icon-img
+	{
+		padding: 11px;
+		float: left;
+	}
+
+
+
+.w-article-title
+	{
+		height: 9rem;
+		position: relative;
+		overflow: auto;
+		background-color: #f7f7f7;
+		background:url(offwhite-dag.png) repeat;
+		border-bottom: 1px lighten(#ccc, 10%) solid;
+
+	&:hover
+		{
+			background-color: lighten(#f7f7f7, 1%);
+			cursor: pointer;
+
+		.article-number 
+			{
+				color: darken(#888, 10%);
+			}
+
+		.article-name 
+			{
+				 color: darken(#888, 10%);
+			}
+
+		}
+
+	.project-icon-img g path, .project-icon-img g polygon, .project-icon-img polygon, .project-icon-img path
+		{
+			fill: lighten(#888, 10%);
+			@include scale(1);
+		}
+
+	.project-icon-img g path, &:hover .project-icon-img g polygon, &:hover .project-icon-img polygon, &:hover .project-icon-img path
+		{
+			fill: darken(#888, 10%);
+			@include scale(1.25);
+			-webkit-transform-origin: center center;
+			-moz-transform-origin: center center;
+			-o-transform-origin: center center;
+			-ms-transform-origin: center center;
+			transform-origin: center center;
+			-webkit-transition: all .2s ease;
+			-moz-transition: all .2s ease;
+			-o-transition: all .2s ease;
+			-ms-transition: all .2s ease;
+			transition: all .2s ease;
+
+		}
+
+	&:active
+		{
+			background-color: darken(#f7f7f7, 1%);
+
+		.article-number 
+			{
+				 color: darken(#888, 20%);
+
+				-webkit-transition: all .2s ease;
+				-moz-transition: all .2s ease;
+				-o-transition: all .2s ease;
+				-ms-transition: all .2s ease;
+				transition: all .2s ease; 
+			}
+
+		.article-name 
+			{
+				 color: darken(#888, 20%);
+
+
+				-webkit-transition: all .2s ease;
+				-moz-transition: all .2s ease;
+				-o-transition: all .2s ease;
+				-ms-transition: all .2s ease;
+				transition: all .2s ease;
+			}
+
+		.project-icon-img g path, &:hover .project-icon-img g polygon, &:hover .project-icon-img polygon, &:hover .project-icon-img path
+			{
+				fill: darken(#888, 20%);
+				@include scale(1.15);
+				-webkit-transform-origin: center center;
+				-moz-transform-origin: center center;
+				-o-transform-origin: center center;
+				-ms-transform-origin: center center;
+				transform-origin: center center;
+				-webkit-transition: all .2s ease;
+				-moz-transition: all .2s ease;
+				-o-transition: all .2s ease;
+				-ms-transition: all .2s ease;
+				transition: all .2s ease;
+				
+	
+			}
+		}
+
+	}
+
+
+
+.article-title
+	{
+		margin: 0;
+		padding: 1.75rem;
+	}
+
+.article-number, .article-name
+	{	
+		font-family: $font-condensed;
+	}
+
+.article-number
+	{
+		font-size: 2.25rem;
+		font-weight: 700;
+		display: block;
+		margin-top: 1.625rem;
+		margin-bottom: - 12px;
+		color: lighten(#888, 10%);
+		text-shadow: rgba(255,255,255,0.5) 0px 3px 3px
+	}
+
+.article-name
+	{
+		font-size: 2.375rem;
+		text-transform: uppercase;
+		margin:0;
+		
+		color: lighten(#888, 10%);
+	}
+
+.block-l
+	{
+	  text-align: left;
+	}
+ 
+/* The ghost, nudged to maintain perfect centering */
+.block-l:before 
+	{
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -0.25em; /* Adjusts for spacing */
+	}
+
+/* The element to be centered, can
+   also be of any width and height */ 
+.centered 
+	{
+	  display: inline-block;
+	  vertical-align: middle;
+	  width: 300px;
+	}
+
+
+.w-feat-img
+	{
+		height: 60%;
+		background: #ccc;
+		width: 100%;
+		position:relative;
+		overflow: hidden;
+			
+	}
+
+.feat-img
+	{
+		min-height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -40rem;
+		margin-top: -22rem;
+		min-width: 100%;
+		max-width: inherit;
+	}
+
+.w-feat-panel
+	{
+		height: 40%;
+		background: #fff;
+		position: relative;
+	}
+
+.feat-panel
+	{
+		position: absolute;
+		bottom: 0;
+		top: -7rem;
+		left: 0;
+		right: 7rem;
+		background: #fff;
+		border-right: 1px #ccc solid;
+	}
+
+.w-feat-content
+	{
+		margin: 0 auto;
+		width: 60%;
+
+	}
+
+.feat-title
+	{
+		font-size: 42px;
+		color: darken(#888, 5%);
+		font-family: $font-condensed;
+		text-transform: uppercase;
+	}
+
+.feat-desc
+	{
+		font-size: 19px;
+		line-height: 1.91425rem;
+		color: darken(#888, 5%);
+	
+	}

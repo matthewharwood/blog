@@ -1,8 +1,10 @@
 class WorksController < ApplicationController
+    layout :choose_layout
   # GET /works
   # GET /works.json
   
   def index
+
     @works = Work.all
 
     respond_to do |format|
@@ -83,8 +85,17 @@ class WorksController < ApplicationController
     @work.destroy
 
     respond_to do |format|
-      format.html { redirect_to works_url }
+      format.html { redirect_to admin_url }
       format.json { head :no_content }
     end
   end
+
+
+   def choose_layout
+     if action_name == 'index' 
+       return 'work'
+     else
+       return 'admin'
+     end
+   end
 end
