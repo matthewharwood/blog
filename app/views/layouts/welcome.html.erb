@@ -66,7 +66,7 @@
 			$(".switchtext").click(function() {
 			    var $selected = $(".selected").removeClass("selected");
 			    var divs = $selected.parent().children();
-			    divs.eq((divs.index($selected) + 1) % divs.length).addClass("selected");
+			    divs.eq((divs.index($selected) + 1) % divs.length).hide().addClass("selected").fadeIn();
 			});
 
 		</script>

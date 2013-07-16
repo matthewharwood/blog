@@ -8,7 +8,15 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<div class="w-modal-nav ">
+	<div class="modal-nav">
+		<h1 class="category-title centered">Departement</h1>
+		<div class="centered prev "><div><</div></div>
+		<div class="centered next "><div>></div></div>
+		<div class="centered close-model-2 "><div>x</div></div>
 
+	</div>
+</div>
 <div id="page-container">
 	<%= render '/side-bar' %>
 	<%= yield %>
@@ -34,7 +42,7 @@
 				width: 260,
 
 				// [optional] Distance from mouse (in pixels) when menu should open
-				threshold: 40,
+				threshold: 80,
 
 				// [optional] Use mouse movement to automatically open/close
 				mouse: true,
@@ -60,11 +68,6 @@
 			}
 		</script>
 
-		<script>
-
-		//	var baz = $('div').data('foo');
-
-		</script>
 </body>
 	
 </html>

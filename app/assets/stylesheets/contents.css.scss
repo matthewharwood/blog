@@ -69,7 +69,13 @@
 		.faded
 			{
 				color:#ccc;
+
+				span
+					{
+						color: #555;
+					}
 			}
+
 			a
 				{
 					color: $main;
@@ -86,3 +92,4 @@
 	{
 		display: block;
 	}
+
