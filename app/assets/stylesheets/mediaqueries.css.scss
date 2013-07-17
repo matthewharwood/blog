@@ -1,0 +1,104 @@
+@media (min-width: 980px) and (max-width: 1399px) {
+//homepage
+.welcome-main dl
+	{
+		font-size: 6rem;
+	}	
+//works page
+	.article-number 
+		{
+			font-size: 1.25rem;
+			font-weight: 700;
+			display: block;
+			margin-top: 3rem;
+		}
+		
+	.article-name 
+		{
+			font-size: 1.375rem;
+		}
+
+	.to-project .project-link
+		{
+			padding: 1rem 2rem;
+		}
+
+	.feat-title
+		{
+			font-size: 1.75rem;
+		}
+
+	.feat-desc
+		{
+			font-size: .875rem;
+			line-height: 1.4105rem;
+
+		}
+}
+
+@media (min-width: 420px)  and (max-width: 979px) {
+//homepage
+.welcome-main 
+	{
+		text-align: center;
+		padding: 0;
+
+	dl
+		{
+			font-size: 3rem;
+		}
+	}
+
+//workspage
+.w-main-works
+	{
+		padding: 0;
+	}
+.w-feat-prev
+	{
+
+	}
+}
+
+
+
+// Visibility utilities
+
+// For desktops
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+.visible-desktop   { display: inherit !important; }
+
+// Tablets & small desktops only
+@media (min-width: 768px) and (max-width: 979px) {
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important ; }
+  // Show
+  .visible-tablet    { display: inherit !important; }
+  // Hide
+  .hidden-tablet     { display: none !important; }
+}
+
+// Phones only
+@media (max-width: 767px) {
+  // Hide everything else
+  .hidden-desktop    { display: inherit !important; }
+  .visible-desktop   { display: none !important; }
+  // Show
+  .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
+  // Hide
+  .hidden-phone      { display: none !important; }
+}
+
+// Print utilities
+.visible-print    { display: none !important; }
+.hidden-print     { }
+
+@media print {
+  .visible-print  { display: inherit !important; }
+  .hidden-print   { display: none !important; }
+}

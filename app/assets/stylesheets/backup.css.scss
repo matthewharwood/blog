@@ -1,10 +1,11 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-
+/*
 $(document).ready ->
 
 #init project
+
   $('.work-item').on click: ->
     
     projecturl = $(this).data("project")
@@ -60,40 +61,27 @@ $(document).ready ->
 #post project modal
 
   postInModal = (data, status) ->
-    indexer = 0
+
     $(".modal-title").hide().html(data.name).fadeIn()
     $(".modal-subtitle").hide().html(data.subtitle).fadeIn()
-    #$(".modal-main").hide().html(data.post_a).fadeIn()
+    $(".modal-main").hide().html(data.post_a).fadeIn()
     keys = ["post_a", "post_b", "post_c", "post_d"]
-    val = []
-    
-
     $.each keys, (i, key) ->
-      val[i] = data[key]
-      return val[i]
-
-    $(".modal-main").hide().html(val[indexer]).fadeIn()
-    $(".next").on click: ->
+      val = data[key]
       
-      if indexer is val.length-1
-        indexer = 0
-        $(".modal-main").hide().html(val[indexer]).fadeIn()
-        
-      else
-        indexer++
-        $(".modal-main").hide().html(val[indexer]).fadeIn()
+      $(".next").on click: ->
+   
+        $active = $(".active-title", "h1")
+        $nextElem = (if $active.next("span").length then $active.next("span") else $("h1").find("span:first"))
+        $active.removeClass "active-title"
+        $nextElem.addClass "active-title"
+        $(".modal-main").hide().html(val).fadeIn()
 
-      $active = $(".active-title", "h1")
-      $nextElem = (if $active.next("span").length then $active.next("span") else $("h1").find("span:first"))
-      $active.removeClass "active-title"
-      $nextElem.addClass "active-title"
-      #$(".modal-main").hide().html(val).fadeIn()
-
-    $(".prev").on click: ->
-      $active = $(".active-title", "h1")
-      $prevElem = (if $active.prev("span").length then $active.prev("span") else $("h1").find("span:last"))
-      $active.removeClass "active-title"
-      $prevElem.addClass "active-title"
+      $(".prev").on click: ->
+        $active = $(".active-title", "h1")
+        $prevElem = (if $active.prev("span").length then $active.prev("span") else $("h1").find("span:last"))
+        $active.removeClass "active-title"
+        $prevElem.addClass "active-title"
 
 
 
@@ -106,7 +94,7 @@ $(document).ready ->
     
 
 
-
+*/
   
     
   
