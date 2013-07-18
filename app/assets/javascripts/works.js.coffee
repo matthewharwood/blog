@@ -4,6 +4,8 @@
 
 $(document).ready ->
   featured = ""
+
+
 #init project
   $('.work-item').on click: ->
     
@@ -18,6 +20,8 @@ $(document).ready ->
 
   setModal = (x) ->
     $(".project-link").attr "data-project", x
+
+
 
 
 
@@ -37,12 +41,16 @@ $(document).ready ->
         $(".modal-nav").toggleClass "table-center"
 
         popProject popVar
+        popProjectImg popVar
+
+
+
 
 #post project in preview
 
   postImgPreview = (data, status) ->
     
-    featured = $(data).find('.modal-image')
+    featured = $(data).find('.modal-image-0').html()
     $(".w-feat-img").hide().html(featured).fadeIn()
     return featured
 
@@ -73,6 +81,7 @@ $(document).ready ->
     $(".modal-title").hide().html(data.name).fadeIn()
     $(".modal-subtitle").hide().html(data.subtitle).fadeIn()
     $(".w-full-bleed").hide().html(featured).fadeIn()
+    $(".w-full-bleed .featured").addClass "full-bleed"
     keys = ["post_a", "post_b", "post_c", "post_d"]
     val = []
     
@@ -96,13 +105,42 @@ $(document).ready ->
       $nextElem = (if $active.next("span").length then $active.next("span") else $("h1").find("span:first"))
       $active.removeClass "active-title"
       $nextElem.addClass "active-title"
-      #$(".modal-main").hide().html(val).fadeIn()
+      
 
     $(".prev").on click: ->
       $active = $(".active-title", "h1")
       $prevElem = (if $active.prev("span").length then $active.prev("span") else $("h1").find("span:last"))
       $active.removeClass "active-title"
       $prevElem.addClass "active-title"
+
+
+  postImgModal = (data, status) ->
+    counter = 0
+    children = $(data).find('.project-img-container').children()
+    console.log children
+    imgVal = []
+
+    $.each children, (i, child) ->
+      imgVal[i] = child
+      console.log imgVal[i]
+      return imgVal[i]
+      
+    $(".next").on click: ->
+      
+      if counter is imgVal.length-1
+        counter = 0
+        console.log imgVal[counter]
+        $(".w-full-bleed").hide().html(imgVal[counter]).fadeIn()
+        $(".w-full-bleed .featured").addClass "full-bleed"
+      else
+        counter++
+        console.log imgVal[counter]
+        $(".w-full-bleed").hide().html(imgVal[counter]).fadeIn()
+        $(".w-full-bleed .featured").addClass "full-bleed"
+
+
+
+    $(".prev").on click: ->
 
 
 
@@ -112,6 +150,13 @@ $(document).ready ->
       url: "/works/" + x + ".json"
       
       success: postInModal
+
+  popProjectImg = (x) ->
+    $.ajax
+      type: "GET"
+      url: "/works/" + x
+      
+      success: postImgModal
     
 
 
