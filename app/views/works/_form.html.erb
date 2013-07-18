@@ -1,5 +1,5 @@
 <div style="background: #fff; ">
-<%= form_for(@work) do |f| %>
+<%= form_for(@work, :html => {:multipart => true}) do |f| %>
   <% if @work.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
@@ -11,6 +11,16 @@
       </ul>
     </div>
   <% end %>
+<div class="field">
+
+</div>
+
+  <div class="field">
+     <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
+
 
   <div class="field">
     <%= f.label :name %><br />

@@ -9,7 +9,7 @@ class WorksController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @works }
+      format.json { render json: @works}
     end
   end
 
@@ -20,7 +20,7 @@ class WorksController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @work }
+      format.json { render json: @work}
     end
   end
 
@@ -34,7 +34,7 @@ class WorksController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @work }
+      format.json { render json: @work  }
     end
   end
 
@@ -46,10 +46,12 @@ class WorksController < ApplicationController
     @work_category = @work.categoryworks.build
   end
 
+
   # POST /works
   # POST /works.json
   def create
     @work = Work.new(params[:work])
+ 
 
     respond_to do |format|
       if @work.save
@@ -73,7 +75,7 @@ class WorksController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @work.errors, status: :unprocessable_entity }
+        format.json { render json: @work.errors,  status: :unprocessable_entity }
       end
     end
   end

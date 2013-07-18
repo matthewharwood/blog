@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<div class="modal-image">
+	<%= image_tag @work.avatar.url(:medium), :class => "featured full-bleed" %>
+</div>
 <p>
   <b>Name:</b>
   <%= @work.name %>

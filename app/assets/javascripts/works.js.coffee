@@ -3,16 +3,16 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
-
+  featured = ""
 #init project
   $('.work-item').on click: ->
     
     projecturl = $(this).data("project")
     categories = $(this).find(".categories-total").html()
     categorySize = $(categories).siblings().length
-    #alert categorySize
     $(".category-title").html(categories)
     getProject projecturl
+    getImg projecturl
     setModal projecturl
     
 
@@ -32,8 +32,7 @@ $(document).ready ->
         popVar = $(".project-link").attr "data-project"
         $("#page-container").css "overflow-y": "auto"
         $(".modal-bg").fadeToggle "slow", "linear"
-        $(".modal-wrap").slideToggle "slow"
-        
+        $(".modal-wrap").slideToggle "slow"        
         $(".w-modal-nav").toggleClass "visible"
         $(".modal-nav").toggleClass "table-center"
 
@@ -41,11 +40,17 @@ $(document).ready ->
 
 #post project in preview
 
+  postImgPreview = (data, status) ->
+    
+    featured = $(data).find('.modal-image')
+    $(".w-feat-img").hide().html(featured).fadeIn()
+    return featured
+
+
   postInPreview = (data, status) ->
-   
     $(".feat-desc").hide().html(data.subtitle).fadeIn()
     $(".feat-title").hide().html(data.name).fadeIn()
-    console.log data
+
 
   getProject = (x) ->
     $.ajax
@@ -54,7 +59,11 @@ $(document).ready ->
       
       success: postInPreview
 
-  
+  getImg = (x) ->
+    $.ajax
+      type: "GET"
+      url: "/works/" + x
+      success: postImgPreview
 
 
 #post project modal
@@ -63,7 +72,7 @@ $(document).ready ->
     indexer = 0
     $(".modal-title").hide().html(data.name).fadeIn()
     $(".modal-subtitle").hide().html(data.subtitle).fadeIn()
-    #$(".modal-main").hide().html(data.post_a).fadeIn()
+    $(".w-full-bleed").hide().html(featured).fadeIn()
     keys = ["post_a", "post_b", "post_c", "post_d"]
     val = []
     
