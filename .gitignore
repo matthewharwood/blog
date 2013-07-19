@@ -7,7 +7,6 @@ capybara-*.html
 /vendor/bundle
 /log/*
 /tmp/*
-/db/*
 /public/system/*
 /coverage/
 /spec/tmp/*
