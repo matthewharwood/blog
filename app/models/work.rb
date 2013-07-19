@@ -8,9 +8,11 @@ class Work < ActiveRecord::Base
   has_many :categories, :through => :categoryworks
   accepts_nested_attributes_for :categories
  
-  attr_accessible :name, :subtitle, :category_ids, :svg, :avatar, :avatar_b, :post_a, :post_b, :post_c, :post_d
+  attr_accessible :name, :subtitle, :category_ids, :svg, :avatar, :avatar_b, :avatar_c, :avatar_d, :post_a, :post_b, :post_c, :post_d
   has_attached_file :avatar, :styles => { :medium => "1280x700>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   has_attached_file :avatar_b, :styles => { :medium => "1280x700>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar_c, :styles => { :medium => "1280x700>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar_d, :styles => { :medium => "1280x700>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 
 
    def categoryworks=(works)

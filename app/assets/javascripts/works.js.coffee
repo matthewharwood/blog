@@ -11,7 +11,7 @@ $(document).ready ->
     
     projecturl = $(this).data("project")
     categories = $(this).find(".categories-total").html()
-    categorySize = $(categories).siblings().length
+    categorySize = $(categories).children().length
     $(".category-title").html(categories)
     getProject projecturl
     getImg projecturl
@@ -116,7 +116,10 @@ $(document).ready ->
 
   postImgModal = (data, status) ->
     counter = 0
-    children = $(data).find('.project-img-container').children()
+    children = $children = $(data).find(".project-img-container").children().filter(->
+      not $(this).find("[alt=\"Missing\"]").length
+    )
+
     console.log children
     imgVal = []
 

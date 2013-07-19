@@ -1,11 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="project-img-container">
 	<div class="modal-image-0">
-		<%= image_tag @work.avatar.url(:medium), :class => "featured" %>
+		<%= image_tag @work.avatar.url(:medium), :class => "featured present" %>
 	</div>
 
 	<div class="modal-image-1">
-		<%= image_tag @work.avatar_b.url(:medium), :class => "featured" %>
+		<%= image_tag @work.avatar_b.url(:medium), :class => "featured present" %>
+	</div>
+
+	<div class="modal-image-2">
+		<%= image_tag @work.avatar_c.url(:medium), :class => "featured present" %>
+	</div>
+	<div class="modal-image-3">
+		<%= image_tag @work.avatar_d.url(:medium), :class => "featured present" %>
 	</div>
 </div>
 <p>
