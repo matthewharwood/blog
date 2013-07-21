@@ -6,8 +6,7 @@ $(document).ready ->
   featured = ""
 
   $(".w-select-nav").one "click", (event) ->
-    
-    $(".to-project").html "<a class='project-link' data-project='a' href='#' >See Full Project</a>"
+    $('.project-link').addClass "inline-visible"
 
 #init project
   $('.work-item').on click: () ->
