@@ -21,10 +21,21 @@
         height: 4.5rem;
         border-bottom: 1px #000 solid;
         
+
+        &:hover
+        {
+          background: rgba(255, 255, 255, 0.1);
+          
+
+        }
+
         &.alive
         {
-          background: rgba(255,255,255, .3);
+          background: rgba(255,255,255, .3) !important;
+
+
         }
+
 
         .icon
           {
@@ -58,3 +69,8 @@
 		}
 
 	}//end of wrapper title meny
+
+.q-inside
+  {
+      background: rgba(255,255,255, .1) !important;
+  }

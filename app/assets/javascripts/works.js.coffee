@@ -5,10 +5,14 @@
 $(document).ready ->
   featured = ""
 
+  $(".w-select-nav").one "click", (event) ->
+    
+    $(".to-project").html "<a class='project-link' data-project='a' href='#' >See Full Project</a>"
 
 #init project
-  $('.work-item').on click: ->
-    
+  $('.work-item').on click: () ->
+
+
     projecturl = $(this).data("project")
     categories = $(this).find(".categories-total").html()
     categorySize = $(categories).children().length
@@ -87,18 +91,21 @@ $(document).ready ->
     
 
     $.each keys, (i, key) ->
-      val[i] = data[key]
-      return val[i]
+      if data[key]
+        val[i] = data[key]
+        return val[i]
 
     $(".modal-main").hide().html(val[indexer]).fadeIn()
     $(".next").on click: ->
       
       if indexer is val.length-1
         indexer = 0
+        console.log indexer
         $(".modal-main").hide().html(val[indexer]).fadeIn()
         
       else
         indexer++
+        console.log indexer
         $(".modal-main").hide().html(val[indexer]).fadeIn()
 
       $active = $(".active-title", "h1")
@@ -108,6 +115,16 @@ $(document).ready ->
       
 
     $(".prev").on click: ->
+
+      if indexer is val.length-1
+        indexer = 0
+        $(".modal-main").hide().html(val[indexer]).fadeIn()
+        
+      else
+        indexer--
+
+        $(".modal-main").hide().html(val[indexer]).fadeIn()
+
       $active = $(".active-title", "h1")
       $prevElem = (if $active.prev("span").length then $active.prev("span") else $("h1").find("span:last"))
       $active.removeClass "active-title"
@@ -135,6 +152,7 @@ $(document).ready ->
         console.log imgVal[counter]
         $(".w-full-bleed").hide().html(imgVal[counter]).fadeIn()
         $(".w-full-bleed .featured").addClass "full-bleed"
+
       else
         counter++
         console.log imgVal[counter]
@@ -145,6 +163,17 @@ $(document).ready ->
 
     $(".prev").on click: ->
 
+      if counter is imgVal.length-1
+        counter = 0
+        console.log imgVal[counter]
+        $(".w-full-bleed").hide().html(imgVal[counter]).fadeIn()
+        $(".w-full-bleed .featured").addClass "full-bleed"
+
+      else
+        counter--
+        console.log imgVal[counter]
+        $(".w-full-bleed").hide().html(imgVal[counter]).fadeIn()
+        $(".w-full-bleed .featured").addClass "full-bleed"
 
 
   popProject = (x) ->
@@ -160,7 +189,21 @@ $(document).ready ->
       url: "/works/" + x
       
       success: postImgModal
-    
+
+
+#navigation javascript
+
+  li = $(".meny-ul li")
+  li.on
+
+    mouseenter: ->
+      myindex = li.index(this)
+      $(".quasi-meny li").eq(myindex).addClass "q-inside" unless $(this).hasClass("alive")
+
+    mouseleave: ->
+      $(".quasi-meny li").removeClass "q-inside"
+
+
 
 
 

@@ -122,6 +122,38 @@
 			svg
 			{
 				margin-top: 2px;
+			
+			}
+
+		}
+
+
+		
+	}
+
+.i-nav
+	{
+		position: absolute;
+		height: 4.5rem;
+		width: 4.5rem;
+		padding: 5px;
+		cursor: pointer;
+		left: 0;
+		top: 0;
+
+	&:hover
+		{
+			background: darken($main, 5%);
+		}
+
+	
+	&:active
+		{
+			background: darken($main, 8%);
+
+			svg
+			{
+				margin-top: 2px;
 			}
 
 		}

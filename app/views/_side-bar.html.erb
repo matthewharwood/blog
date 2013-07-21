@@ -2,9 +2,9 @@
             <div class="w-t-meny">
                 <h2>Navigation</h2>
             </div>
-            <ul>
-                <li class="alive">
-                    <div class="icon">
+            <ul class="meny-ul">
+                <li id="home" class="alive meny-menu-items">
+                   <%= link_to '<div class="icon">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="63px" height="63px" viewBox="0 0 63 63" enable-background="new 0 0 63 63" xml:space="preserve">
                     
@@ -24,11 +24,11 @@
                             </g>                
                         </svg>
                     </div>
-                    
-                    <%= link_to "Home", root_url %>
+                    Home
+                   '.html_safe, root_url %>
                 </li>
-                <li>
-                    <div class="icon">
+                <li id="works"  class="meny-menu-items">
+                    <%= link_to '<div class="icon">
                         <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="63px" height="63px" viewBox="0 0 63 63" enable-background="new 0 0 63 63" xml:space="preserve">
                            <path fill="#010101" d="M22.461,28.625c2.493,0.585,5.811,0.94,9.457,0.94c5.636,0,10.489-0.849,12.718-2.076l0.727-4.86
@@ -42,11 +42,11 @@
                             c-6.941,0-12.568-1.266-12.568-2.822C20.932,29.486,21.485,29.025,22.461,28.625z"/>
                         </svg>
                     </div>
-                   
-                    <%= link_to "Works", works_path %>
+                    Works
+                    '.html_safe, works_path %>
                 </li>
-                <li>
-                    <div class="icon">
+                <li id="about" class="meny-menu-items">
+                   <%= link_to '<div class="icon">
                          <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="63px" height="63px" viewBox="0 0 63 63" enable-background="new 0 0 63 63" xml:space="preserve">
                             <g>
@@ -57,10 +57,11 @@
                             </g>
                         </svg>
                     </div>
-                    <%= link_to "About", about_path %>
+                    About
+                    '.html_safe, about_path %>
                 </li>
-                <li>
-                    <div class="icon">
+                <li id="contact" class="meny-menu-items">
+                    <%= link_to '<div class="icon">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="63px" height="63px" viewBox="0 0 63 63" enable-background="new 0 0 63 63" xml:space="preserve">
                             <g>
@@ -71,8 +72,9 @@
                             </g>
                         </svg>
                     </div>
-                    
-                    <%= link_to "Contact", contact_path %>
+                    Contact
+                    '.html_safe, contact_path %>
                 </li>
+                
             </ul>
         </nav>
