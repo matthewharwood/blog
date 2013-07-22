@@ -181,6 +181,11 @@
 				width: 80%;
 			}
 
+	.w-modal-nav h1
+		{
+			font-size: 19px;
+		}
+
 
 	}
 @media (min-width: 481px) and (max-width: 767px) 
@@ -197,26 +202,12 @@
 				dl
 					{
 						font-size: 3rem;
-						text-align: center;
+						text-align: left;
 						padding-top: 2.5rem;
+						padding-left: .5rem
 					}
 			}
 
-		.w-modal-nav h1
-			{
-				font-size: 19px;
-			}
-
-		.w-main-works
-			{
-				padding: 0;
-			}
-
-		.site-bar ul
-			{
-				margin-right: 0;
-
-			}
 
 
 	}
@@ -235,14 +226,12 @@
 			dl
 				{
 					font-size: 2.5rem;
-					text-align: center;
+					text-align: left;
 					padding-top: 1.5rem;
+					padding-left: .5rem;
 				}
 		}
-	.w-modal-nav h1
-		{
-			font-size: 19px;
-		}
+
 
 //works page
 	.w-main-works
@@ -276,50 +265,6 @@
 			visibility: hidden;
 		}
 
-	.w-modal-nav h1
-		{
-			font-size: 19px;
-		}
-				
-	.w-modal-nav h1
-		{
-			font-size: 19px;
-		}
-
-	.w-modal-title
-		{
-			position: relative;
-			left: inherit;
-			right: inherit;
-		}
-
-	.w-modal-main
-		{
-			padding-left:0;
-			width: 100%;
-		}
-
-	.modal-main figure, .main-modal p, .main-modal h3
-		{
-			padding: 0;
-			margin-left: 0;
-		}
-
-}
-@media (max-height: 700px) {
-
-
-.welcome-main
-		{
-			padding: 0;
-
-			dl
-				{
-					padding: 1rem 0 0 4.5rem;
-					font-size: 6.5rem;
-					
-				}
-		}	
 
 }
 //phone landscape
@@ -341,9 +286,9 @@
 
 			dl
 				{
-					padding: 1rem 0 0 0;
+					padding: 1rem 0 0 .5rem;
 					font-size: 2rem;
-					text-align: center;
+					text-align: left;
 				}
 		}
 
@@ -377,10 +322,7 @@
 			visibility: visible;
 		}
 
-.w-modal-nav h1
-	{
-		font-size: 19px;
-	}
+
 	 
 
 	
@@ -412,6 +354,30 @@
 
 // Phones only
 @media (max-width: 767px) {
+
+	.w-modal-nav h1
+		{
+			font-size: 19px;
+		}
+
+	.w-modal-title
+		{
+			position: relative;
+			left: inherit;
+			right: inherit;
+		}
+
+	.w-modal-main
+		{
+			padding-left:0;
+			width: 100%;
+		}
+
+	.modal-main figure, .main-modal p, .main-modal h3
+		{
+			padding: 0;
+			margin-left: 0;
+		}
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important; }
@@ -419,6 +385,9 @@
   .visible-phone     { display: inherit !important; } // Use inherit to restore previous behavior
   // Hide
   .hidden-phone      { display: none !important; }
+
+
+
 }
 
 // Print utilities
