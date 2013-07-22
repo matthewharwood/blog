@@ -112,7 +112,7 @@
 @media(min-width : 768px) and (max-width : 1024px)
 
 	{
-	.w-main
+		.w-main
 			{
 				padding: 0;
 			}
@@ -354,7 +354,14 @@
 
 // Phones only
 @media (max-width: 767px) {
-
+	.site-bar ul
+		{
+			margin:0;
+		}
+	.w-main-works 
+		{
+			padding:0;
+		}
 	.w-modal-nav h1
 		{
 			font-size: 19px;
@@ -378,6 +385,16 @@
 			padding: 0;
 			margin-left: 0;
 		}
+	.close-model-2, .prev, .next
+		{
+			min-width: 3.5rem;
+		}
+	.modal-main p, .modal-main h3
+		{
+			margin: 0;
+			padding: 0;
+		}
+		
   // Hide everything else
   .hidden-desktop    { display: inherit !important; }
   .visible-desktop   { display: none !important; }
