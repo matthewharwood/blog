@@ -1,22 +1,26 @@
 class WorksController < ApplicationController
     layout :choose_layout
+    helper :application
+
+
   # GET /works
   # GET /works.json
   
   def index
-    @title = "Morning Harwood"
+    
     @works = Work.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @works}
     end
+
   end
 
   # GET /works/1
   # GET /works/1.json
   def show
-    page_title = "Morning Harwood"
+
     @work = Work.find(params[:id])
 
     respond_to do |format|
@@ -28,7 +32,7 @@ class WorksController < ApplicationController
   # GET /works/new
   # GET /works/new.json
   def new
-    page_title = "Morning Harwood"
+
     @work = Work.new
 
     @all_categories = Category.all
@@ -42,7 +46,7 @@ class WorksController < ApplicationController
 
   # GET /works/1/edit
   def edit
-    page_title = "Morning Harwood"
+
     @work = Work.find(params[:id])
 
     @all_categories = Category.all
@@ -53,7 +57,7 @@ class WorksController < ApplicationController
   # POST /works
   # POST /works.json
   def create
-    @page_title = "Morning Harwood"
+
     @work = Work.new(params[:work])
  
 
@@ -71,7 +75,7 @@ class WorksController < ApplicationController
   # PUT /works/1
   # PUT /works/1.json
   def update
-    @page_title = "Morning Harwood"
+
     @work = Work.find(params[:id])
 
     respond_to do |format|

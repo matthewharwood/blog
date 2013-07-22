@@ -102,6 +102,7 @@ $(document).ready ->
         console.log indexer
         $(".modal-main").hide().html(val[indexer]).fadeIn()
         
+        
       else
         indexer++
         console.log indexer
@@ -112,7 +113,7 @@ $(document).ready ->
       $active.removeClass "active-title"
       $nextElem.addClass "active-title"
       
-
+      
     $(".prev").on click: ->
 
       if indexer is val.length-1

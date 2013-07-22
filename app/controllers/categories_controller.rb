@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   
   def index
+    
     @categories = Category.all
 
     respond_to do |format|
