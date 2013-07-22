@@ -4,12 +4,13 @@
 
 $(document).ready ->
   featured = ""
+  projectId = 0
 
   $(".w-select-nav").one "click", (event) ->
     $('.project-link').addClass "inline-visible"
 
 #init project
-  $('.work-item').on click: () ->
+  $('.work-item ').on click: () ->
 
 
     projecturl = $(this).data("project")
@@ -27,8 +28,6 @@ $(document).ready ->
 
 
 
-
-
 #set project preview 
 
   $('.project-link, .close-model-2').on click: ->
@@ -37,6 +36,7 @@ $(document).ready ->
 
       addModal = -> 
         popVar = $(".project-link").attr "data-project"
+        console.log popVar
         $("#page-container").css "overflow-y": "auto"
         $(".modal-bg").fadeToggle "slow", "linear"
         $(".modal-wrap").slideToggle "slow"        

@@ -101,6 +101,10 @@
 		{
 			width: 80%;
 		}
+	.w-modal-nav h1
+		{
+			font-size: 19px;
+		}
 
 }
 
@@ -176,6 +180,10 @@
 			{
 				width: 80%;
 			}
+		.w-modal-nav h1
+			{
+				font-size: 19px;
+			}
 	}
 
 
@@ -197,6 +205,10 @@
 					text-align: center;
 					padding-top: 4.5rem;
 				}
+		}
+	.w-modal-nav h1
+		{
+			font-size: 19px;
 		}
 
 //works page
@@ -231,16 +243,23 @@
 			visibility: hidden;
 		}
 
+	.w-modal-nav h1
+		{
+			font-size: 19px;
+		}
+
 }
 @media (max-height: 700px) {
+
+
 .welcome-main
 		{
 			padding: 0;
 
 			dl
 				{
-					padding: 1rem 0 0 0;
-					font-size: 4.5rem;
+					padding: 1rem 0 0 4.5rem;
+					font-size: 6.5rem;
 					
 				}
 		}	
@@ -301,6 +320,10 @@
 			visibility: visible;
 		}
 
+.w-modal-nav h1
+	{
+		font-size: 19px;
+	}
 	 
 
 	
