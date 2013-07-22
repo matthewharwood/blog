@@ -1,3 +1,35 @@
+//Desktop
+@media (min-width: 900px) and (max-width: 1440px)
+	{
+
+	}
+//macbook pro
+@media (min-width: 900px) and (max-width: 1440px)
+	{
+		.w-article-title
+			{
+				padding-left: 2rem;
+			}
+
+			.article-number 
+			{
+				font-size: 1.75rem;
+				margin-top: 2.625rem;
+			}
+		
+		.article-name 
+			{
+				font-size: 1.75rem;
+			}
+
+		.project-icon-img 
+			{
+				display: none;
+				visibility: hidden;
+			}
+	}
+
+
 @media (min-width: 800px) and (max-width: 1280px) {
 //homepage
 
@@ -15,15 +47,15 @@
 //works page
 	.article-number 
 		{
-			font-size: 1.25rem;
+			font-size: 1.675rem;
 			font-weight: 700;
 			display: block;
-			margin-top: 3rem;
+			
 		}
 		
 	.article-name 
 		{
-			font-size: 1.375rem;
+			font-size: 1.675rem;
 		}
 
 	.to-project .project-link
@@ -73,7 +105,7 @@
 }
 
 //tablet
-@media(min-width : 768px) and (max-width : 1024px)
+@media(min-width : 481px) and (max-width : 1024px)
 
 	{
 	.w-main
