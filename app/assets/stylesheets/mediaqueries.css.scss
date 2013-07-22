@@ -232,7 +232,20 @@
 		}
 
 }
+@media (max-height: 700px) {
+.welcome-main
+		{
+			padding: 0;
 
+			dl
+				{
+					padding: 1rem 0 0 0;
+					font-size: 4.5rem;
+					
+				}
+		}	
+
+}
 //phone landscape
 @media (max-height: 300px) {
 
