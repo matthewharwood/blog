@@ -184,26 +184,58 @@
 
 	}
 @media (min-width: 481px) and (max-width: 767px) 
-	{
-		.w-main-works
+	{	
+		.w-main
+		{
+			padding: 0;
+		}
+
+		.welcome-main
 			{
 				padding: 0;
+
+				dl
+					{
+						font-size: 3rem;
+						text-align: center;
+						padding-top: 2.5rem;
+					}
 			}
+
 		.w-modal-nav h1
 			{
 				font-size: 19px;
 			}
+
+		.w-main-works
+			{
+				padding: 0;
+			}
+
+		.site-bar ul
+			{
+				margin-right: 0;
+
+			}
+			
+		.w-modal-nav h1
+			{
+				font-size: 19px;
+			}
+
 		.w-modal-title
 			{
 				position: relative;
 				left: inherit;
 				right: inherit;
 			}
+
 		.w-modal-main
 			{
 				padding-left:0;
 				width: 100%;
 			}
+
 		.modal-main figure, .main-modal p, .main-modal h3
 			{
 				padding: 0;
@@ -227,7 +259,7 @@
 				{
 					font-size: 2.5rem;
 					text-align: center;
-					padding-top: 4.5rem;
+					padding-top: 1.5rem;
 				}
 		}
 	.w-modal-nav h1
