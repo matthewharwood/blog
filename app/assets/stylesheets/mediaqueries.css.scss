@@ -109,7 +109,7 @@
 }
 
 //tablet
-@media(min-width : 481px) and (max-width : 1024px)
+@media(min-width : 768px) and (max-width : 1024px)
 
 	{
 	.w-main
@@ -180,13 +180,37 @@
 			{
 				width: 80%;
 			}
+
+
+	}
+@media (min-width: 481px) and (max-width: 767px) 
+	{
+		.w-main-works
+			{
+				padding: 0;
+			}
 		.w-modal-nav h1
 			{
 				font-size: 19px;
 			}
+		.w-modal-title
+			{
+				position: relative;
+				left: inherit;
+				right: inherit;
+			}
+		.w-modal-main
+			{
+				padding-left:0;
+				width: 100%;
+			}
+		.modal-main figure, .main-modal p, .main-modal h3
+			{
+				padding: 0;
+				margin-left: 0;
+			}
+
 	}
-
-
 //phones
 @media (min-width: 320px) and (max-width: 480px) {
 
