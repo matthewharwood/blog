@@ -217,30 +217,7 @@
 				margin-right: 0;
 
 			}
-			
-		.w-modal-nav h1
-			{
-				font-size: 19px;
-			}
 
-		.w-modal-title
-			{
-				position: relative;
-				left: inherit;
-				right: inherit;
-			}
-
-		.w-modal-main
-			{
-				padding-left:0;
-				width: 100%;
-			}
-
-		.modal-main figure, .main-modal p, .main-modal h3
-			{
-				padding: 0;
-				margin-left: 0;
-			}
 
 	}
 //phones
@@ -302,6 +279,30 @@
 	.w-modal-nav h1
 		{
 			font-size: 19px;
+		}
+				
+	.w-modal-nav h1
+		{
+			font-size: 19px;
+		}
+
+	.w-modal-title
+		{
+			position: relative;
+			left: inherit;
+			right: inherit;
+		}
+
+	.w-modal-main
+		{
+			padding-left:0;
+			width: 100%;
+		}
+
+	.modal-main figure, .main-modal p, .main-modal h3
+		{
+			padding: 0;
+			margin-left: 0;
 		}
 
 }
